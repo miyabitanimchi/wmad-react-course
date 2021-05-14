@@ -1,5 +1,5 @@
 import React from "react";
-import "./ToggleText.css";
+import "./css/ToggleText.css";
 import { render } from "@testing-library/react";
 
 export default class ToggleText extends React.Component {
@@ -20,8 +20,6 @@ export default class ToggleText extends React.Component {
       left: false,
       lBtnIsPressed: true,
     });
-    console.log(this.state.left);
-    console.log(typeof this.state.lBtnIsPressed);
   };
 
   toggleTextR = () => {
@@ -40,7 +38,6 @@ export default class ToggleText extends React.Component {
         : "This is the right text",
       left: true,
     });
-    console.log(this.state.left);
   };
 
   render() {
