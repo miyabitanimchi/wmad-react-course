@@ -11,13 +11,4 @@ const StudentList = (props) => {
   );
 };
 
-// const showStudentName = (props) => {
-//   const studentNameArr = props.list;
-//   studentNameArr.map((name) => {
-//     setInterval(() => {
-//       document.getElementById("text").innerHTML = name;
-//     }, 3000);
-//   });
-// };
-
 export default StudentList;

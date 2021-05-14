@@ -4,7 +4,7 @@ import "./css/App.css";
 
 class App extends React.Component {
   state = {
-    text: "Loading...",
+    text: "Loading Students...",
   };
 
   componentDidMount() {
@@ -18,8 +18,8 @@ class App extends React.Component {
               "Miyao ",
               "Miyasako ",
               "Mia ",
-              "Myaos ",
-              "Myaowwwww🐱 ",
+              "Meowth ",
+              "Meowwwww🐱 ",
             ]}
           />
         ),
