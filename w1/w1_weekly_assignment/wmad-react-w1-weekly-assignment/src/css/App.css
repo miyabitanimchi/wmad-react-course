@@ -4,6 +4,11 @@
   margin: 0 auto;
   margin-top: 4rem;
   width: 50%;
-  height: 5.5rem;
+  height: 9rem;
   border-radius: 10px;
+  padding-top: 1rem;
+}
+
+button {
+  margin-top: 1rem;
 }
