@@ -5,45 +5,25 @@ import { render } from "@testing-library/react";
 export default class ToggleText extends React.Component {
   state = {
     left: true,
-    text: "This is the left text",
-    lBtnIsPressed: "",
+    text: "left",
   };
 
   toggleTextL = () => {
-    if (!this.state.left) {
-      return;
-    }
     this.setState({
-      text: this.state.left
-        ? "This is the left text"
-        : "This is the right text",
-      left: false,
-      lBtnIsPressed: true,
+      left: true,
     });
   };
 
   toggleTextR = () => {
-    if (this.state.lBtnIsPressed === "") {
-      this.setState({
-        text: "This is the right text",
-      });
-      return;
-    }
-    if (this.state.left) {
-      return;
-    }
     this.setState({
-      text: this.state.left
-        ? "This is the left text"
-        : "This is the right text",
-      left: true,
+      left: false,
     });
   };
 
   render() {
     return (
       <div className="toggle-text">
-        <h1>{this.state.text}</h1>
+        <h1>This is the {this.state.left ? "left" : "right"} text</h1>
         <div>
           <button onClick={this.toggleTextL}>Show Left</button>
           <button onClick={this.toggleTextR}>Show Right</button>

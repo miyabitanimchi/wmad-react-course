@@ -6,36 +6,30 @@ class App extends React.Component {
   state = {
     text: "Loading Students...",
     disabled: true,
+    names: [],
   };
 
   componentDidMount() {
-    this.showNames = setInterval(() => {
+    this.showNames = setTimeout(() => {
       this.setState({
-        text: (
-          <StudentList
-            list={[
-              "Miyabi ",
-              "Miyako ",
-              "Miyao ",
-              "Miyasako ",
-              "Mia ",
-              "Meowth ",
-              "Meowwwww🐱 ",
-            ]}
-          />
-        ),
+        names: [
+          "Miyabi ",
+          "Miyako ",
+          "Miyao ",
+          "Miyasako ",
+          "Mia ",
+          "Meowth ",
+          "Meowwwww🐱 ",
+        ],
         disabled: false,
+        text: "",
       });
     }, 3000);
   }
 
-  componentWillUnmount() {
-    clearInterval(this.showNames);
-  }
-
-  // なぜすぐ戻る？
   shuffleNames = () => {
-    let nameArr = this.state.text.props.list;
+    console.log("hello");
+    let nameArr = this.state.names;
     for (let i = nameArr.length; i > 0; i--) {
       let shuffledIndex = Math.floor(Math.random() * i);
 
@@ -45,7 +39,7 @@ class App extends React.Component {
       nameArr[shuffledIndex] = temp;
     }
     this.setState({
-      text: nameArr,
+      names: nameArr,
     });
   };
 
@@ -53,6 +47,8 @@ class App extends React.Component {
     return (
       <div className="show-names">
         <div>{this.state.text}</div>
+
+        <StudentList list={this.state.names} />
         <button onClick={this.shuffleNames} disabled={this.state.disabled}>
           Shuffle Names
         </button>

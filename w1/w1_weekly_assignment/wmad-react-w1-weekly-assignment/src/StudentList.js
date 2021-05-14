@@ -3,11 +3,15 @@ import "./css/StudentList.css";
 
 const StudentList = (props) => {
   return (
-    <p>
-      {props.list.map((name) => {
-        return name;
-      })}
-    </p>
+    <>
+      <p>
+        {props.list.length
+          ? props.list.map((name) => {
+              return name;
+            })
+          : ""}
+      </p>
+    </>
   );
 };
 
