@@ -29,8 +29,8 @@ class App extends React.Component {
 
   shuffleNames = () => {
     let nameArr = this.state.names;
-    console.log(nameArr);
-    for (let i = nameArr.length; i > 0; i--) {
+    // console.log(nameArr);
+    for (let i = nameArr.length - 1; i >= 0; --i) {
       let shuffledIndex = Math.floor(Math.random() * i);
 
       // Swap the places
