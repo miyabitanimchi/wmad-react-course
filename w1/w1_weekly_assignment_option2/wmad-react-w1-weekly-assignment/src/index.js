@@ -3,14 +3,12 @@ import ReactDOM from "react-dom";
 import "./css/index.css";
 import ToggleText from "./ToggleText";
 import App from "./App";
-import FetchAPI from "./FetchAPI";
 import reportWebVitals from "./reportWebVitals";
 
 ReactDOM.render(
   <React.StrictMode>
     <ToggleText />
     <App />
-    <FetchAPI />
   </React.StrictMode>,
   document.getElementById("root")
 );

@@ -4,7 +4,7 @@ import "./css/App.css";
 
 class App extends React.Component {
   state = {
-    text: "Loading Students...",
+    text: true,
     disabled: true,
     names: [],
   };
@@ -13,23 +13,23 @@ class App extends React.Component {
     this.showNames = setTimeout(() => {
       this.setState({
         names: [
-          "Miyabi ",
-          "Miyako ",
-          "Miyao ",
-          "Miyasako ",
-          "Mia ",
-          "Meowth ",
-          "Meowwwww🐱 ",
+          "Eren ",
+          "Mikasa ",
+          "Armin ",
+          "Levi ",
+          "Hange ",
+          "Sasha ",
+          "Conny",
         ],
         disabled: false,
-        text: "",
+        text: false,
       });
     }, 3000);
   }
 
   shuffleNames = () => {
-    console.log("hello");
     let nameArr = this.state.names;
+    console.log(nameArr);
     for (let i = nameArr.length; i > 0; i--) {
       let shuffledIndex = Math.floor(Math.random() * i);
 
@@ -46,9 +46,15 @@ class App extends React.Component {
   render() {
     return (
       <div className="show-names">
-        <div>{this.state.text}</div>
+        <div>
+          {this.state.text ? (
+            "Loading..."
+          ) : (
+            <StudentList list={this.state.names} />
+          )}
+        </div>
 
-        <StudentList list={this.state.names} />
+        {/* <StudentList list={this.state.names} /> */}
         <button onClick={this.shuffleNames} disabled={this.state.disabled}>
           Shuffle Names
         </button>

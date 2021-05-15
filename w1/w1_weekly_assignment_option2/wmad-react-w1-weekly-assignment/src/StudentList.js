@@ -2,6 +2,7 @@ import React from "react";
 import "./css/StudentList.css";
 
 const StudentList = (props) => {
+  console.log(props);
   return (
     <ol>
       {props.list.length

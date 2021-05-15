@@ -1,10 +1,13 @@
 .show-names {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   border: 1px solid #000000;
-  text-align: center;
   margin: 0 auto;
   margin-top: 4rem;
   width: 50%;
-  height: 9rem;
+  height: 15rem;
   border-radius: 10px;
   padding-top: 1rem;
 }
