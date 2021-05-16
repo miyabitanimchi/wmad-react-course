@@ -10,6 +10,7 @@ const Meme = (props) => {
     }
     console.log(props.boxCount);
     console.log(inputs);
+    return inputs;
   };
   return (
     <div>
