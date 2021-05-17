@@ -1,5 +1,5 @@
 import React from "react";
-import "./css/ToggleText.css";
+import "./ToggleText.css";
 import { render } from "@testing-library/react";
 
 export default class ToggleText extends React.Component {
@@ -22,14 +22,20 @@ export default class ToggleText extends React.Component {
 
   render() {
     return (
-      <div className="toggle-text">
-        <h1>This is the {this.state.left ? "left" : "right"} text</h1>
+      <section className="toggle-text">
+        <h1 className={this.state.left ? "style-left" : "style-right"}>
+          This is the {this.state.left ? "left" : "right"} text
+        </h1>
         <div>
-          <button onClick={this.toggleTextL}>Show Left</button>
-          <button onClick={this.toggleTextR}>Show Right</button>
+          <button className="btn-left" onClick={this.toggleTextL}>
+            Show Left
+          </button>
+          <button className="btn-right" onClick={this.toggleTextR}>
+            Show Right
+          </button>
         </div>
         <h5>Assignment 1 in Option 2</h5>
-      </div>
+      </section>
     );
   }
 }

@@ -1,0 +1,32 @@
+.toggle-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #000000;
+  border-radius: 20px;
+  width: 50%;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.style-left {
+  color: rgb(0, 185, 225);
+}
+
+.style-right {
+  color: rgb(255, 82, 72)
+}
+
+.btn-left {
+  background: rgb(0, 185, 225);
+}
+
+.btn-right {
+  background: rgb(255, 82, 72);
+}
+
+.btn-left, .btn-right {
+  color: #ffffff;
+  margin: 0 5px;
+}

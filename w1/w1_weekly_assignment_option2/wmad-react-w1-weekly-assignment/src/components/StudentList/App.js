@@ -1,10 +1,10 @@
 import React from "react";
 import StudentList from "./StudentList";
-import "./css/App.css";
+import "./App.css";
 
 class App extends React.Component {
   state = {
-    text: true,
+    loding: true,
     disabled: true,
     names: [],
   };
@@ -22,7 +22,7 @@ class App extends React.Component {
           "Conny",
         ],
         disabled: false,
-        text: false,
+        loding: false,
       });
     }, 3000);
   }
@@ -45,21 +45,23 @@ class App extends React.Component {
 
   render() {
     return (
-      <div className="show-names">
-        <div>
-          {this.state.text ? (
-            "Loading..."
-          ) : (
-            <StudentList list={this.state.names} />
-          )}
-        </div>
+      <section className="show-name-container">
+        <div className="main-wrap">
+          <div>
+            {this.state.loding ? (
+              "Loading..."
+            ) : (
+              <StudentList list={this.state.names} />
+            )}
+          </div>
 
-        {/* <StudentList list={this.state.names} /> */}
-        <button onClick={this.shuffleNames} disabled={this.state.disabled}>
-          Shuffle Names
-        </button>
+          {/* <StudentList list={this.state.names} /> */}
+          <button onClick={this.shuffleNames} disabled={this.state.disabled}>
+            Shuffle Names
+          </button>
+        </div>
         <h5>Assignment 2 in Option 2</h5>
-      </div>
+      </section>
     );
   }
 }

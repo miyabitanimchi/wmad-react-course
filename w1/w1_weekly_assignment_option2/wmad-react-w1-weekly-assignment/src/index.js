@@ -1,8 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import "./css/index.css";
-import ToggleText from "./ToggleText";
-import App from "./App";
+import "./index.css";
+import ToggleText from "./components/ToggleText/ToggleText";
+import App from "./components/StudentList/App";
 import reportWebVitals from "./reportWebVitals";
 
 ReactDOM.render(

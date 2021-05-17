@@ -1,5 +1,5 @@
 import React from "react";
-import "./css/StudentList.css";
+import "./StudentList.css";
 
 const StudentList = (props) => {
   return (
