@@ -6,7 +6,8 @@ const Meme = (props) => {
   const createInputs = () => {
     let inputs = [];
     for (let index = 1; index <= props.boxCount; index++) {
-      inputs.push(<input type="text" name="text" key={index} />);
+      inputs.push(<label key={index}>Text {index}</label>);
+      inputs.push(<input type="text" name="text" key={index + "text"} />);
     }
     console.log(props.boxCount);
     console.log(inputs);

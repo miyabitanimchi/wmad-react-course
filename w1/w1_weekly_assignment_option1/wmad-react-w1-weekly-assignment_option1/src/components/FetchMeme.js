@@ -44,6 +44,16 @@ class FetchMeme extends React.Component {
     }
   };
 
+  postImg = async () => {
+    try {
+      const response = await fetch("https://api.imgflip.com/caption_image");
+      const data = await response.json();
+      console.log(data);
+    } catch (error) {
+      console.log(`Oops! error: ${error}`);
+    }
+  };
+
   render() {
     return (
       <div>
@@ -58,7 +68,7 @@ class FetchMeme extends React.Component {
         )}
 
         <button onClick={this.getRandomImg}>Get image</button>
-        <button>Create meme with this image</button>
+        <button onClick={this.postImg}>Create meme with this image</button>
       </div>
     );
   }

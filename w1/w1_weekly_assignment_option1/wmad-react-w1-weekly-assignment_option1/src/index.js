@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
-import FetchMeme from "./FetchMeme";
+import FetchMeme from "./components/FetchMeme";
 import reportWebVitals from "./reportWebVitals";
 
 ReactDOM.render(
