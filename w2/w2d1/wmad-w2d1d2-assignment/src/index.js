@@ -1,9 +1,9 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
-import Users from "./User/Users";
+import Users from "./ClassComponent/Users/Users";
 import reportWebVitals from "./reportWebVitals";
-// import FetchUsersData from "./FetchUsersData/FetchUsersData";
+// import FetchUsersData from "./Hooks/FetchUsersData/FetchUsersData";
 
 ReactDOM.render(
   <React.StrictMode>
