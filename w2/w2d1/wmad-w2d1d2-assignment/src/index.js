@@ -1,13 +1,14 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
-// import User from "./User/User";
+import Users from "./User/Users";
 import reportWebVitals from "./reportWebVitals";
-import FetchUsersData from "./FetchUsersData/FetchUsersData";
+// import FetchUsersData from "./FetchUsersData/FetchUsersData";
 
 ReactDOM.render(
   <React.StrictMode>
-    <FetchUsersData />
+    <Users />
+    {/* <FetchUsersData /> */}
   </React.StrictMode>,
   document.getElementById("root")
 );
